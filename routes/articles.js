@@ -22,9 +22,9 @@ router.post('/add', async (req, res, next) => {
             let result = await querySql(sql, [arttitle, abstract, category, tag, thumbnail, content, html, pv]);
             let msg=null;
             request.post({
-                url: `http://data.zz.baidu.com/urls?site=www.itemsblog.com&token=u2H3rPTaDryJWq7P`,
+                url: `http://data.zz.baidu.com/urls?site=www.xxx.com&token=u2H3rPTaDryJWq7P`, //xxx为自己的网站域名
                 headers: { 'Content-Type': 'text/plain' },
-                body: `www.itemsblog.com/article/${result.insertId}`
+                body: `www.xxx.com/article/${result.insertId}`
             }, (error, response, body) => {
                 console.log(response);
                 console.log('推送结果：', body);
@@ -68,9 +68,9 @@ router.post('/update', async (req, res, next) => {
         let result = await querySql(sql, [arttitle, abstract, category, tag, thumbnail, content, html, pv, id]);
         let msg=null;
         request.post({
-            url: `http://data.zz.baidu.com/urls?site=www.itemsblog.com&token=u2H3rPTaDryJWq7P`,
+            url: `http://data.zz.baidu.com/urls?site=www.xxx.com&token=u2H3rPTaDryJWq7P`,//xxx为自己的网站域名
             headers: { 'Content-Type': 'text/plain' },
-            body: `www.itemsblog.com/article/${id}`
+            body: `www.xxx.com/article/${id}`
         }, (error, response, body) => {
             console.log(response);
             console.log('推送结果：', body);

@@ -11,9 +11,9 @@ node + express + mysql + es6/7 等
 #### 注意：由于涉及大量的 ES6/7 等新属性，node 需要 6.0 以上版本
 
 ```
-git clone https://github.com/qqq408370953/blog-nuxt.git  
+git clone https://github.com/qqq408370953/blog-node.git  
 
-cd blog-nuxt
+cd blog-node
 
 npm install
 
